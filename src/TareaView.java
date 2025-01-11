@@ -63,16 +63,13 @@ public class TareaView {
             JOptionPane.showMessageDialog(null, "El nombre de la tarea no puede estar vacío.");
             return;
         }
-
         String descripcion = JOptionPane.showInputDialog("Ingrese la descripción de la tarea:");
         if (descripcion == null) descripcion = "Sin descripción";
-
         String fechaCreacion = JOptionPane.showInputDialog("Ingrese la fecha de creación (ej. 08/01/2025):");
         if (fechaCreacion == null || fechaCreacion.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "La fecha de creación no puede estar vacía.");
             return;
         }
-
         Tarea nuevaTarea = new Tarea(nombre, descripcion, fechaCreacion);
         tareaController.agregarTarea(nuevaTarea);
     }
@@ -84,7 +81,6 @@ public class TareaView {
             JOptionPane.showMessageDialog(null, "Debe ingresar un nombre válido.");
             return;
         }
-
         tareaController.eliminarTareaPendiente(nombreTarea);
     }
 }

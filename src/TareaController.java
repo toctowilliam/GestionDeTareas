@@ -19,7 +19,7 @@ public class TareaController {
         JOptionPane.showMessageDialog(null, "Tarea agregada:\n" + tarea.getNombre());
     }
 
-    // Método para marcar una tarea como completada
+    // Marcar una tarea como completada
     public void marcarTareaCompletada() {
         if (tareasPendientes.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No hay tareas pendientes para completar.", "Warning", JOptionPane.WARNING_MESSAGE);
